@@ -31,7 +31,7 @@ nav ul li{
 
 nav ul li a{
     color: #ffffff;
-    text decoration: none;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -41,7 +41,7 @@ nav ul li a:hover{
 
 main{
     display: flex;
-    flex direction:column;
+    flex-direction:column;
     align-items: center;
     margin: 20px 0;
 }
