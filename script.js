@@ -32,3 +32,12 @@ function updateCounter() {
 }
 
 document.getElementById('counter-button').addEventListener('click', updateCounter);
+
+// Energy Level Display
+function getEnergyLevel() {
+    let numOfEnergy = prompt('What is your energy level?')
+
+    for (let i = 0; i < numOfEnergy; i++){
+        document.write("<img='loop-img' src=images/")
+    }
+}
