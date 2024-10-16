@@ -1,28 +1,34 @@
-"use strict";
+"use strict"
+
 // Dynamic background color change
-document.getElementById('color-button').addEventListener('click', function() {
+function changeBackgroundColor(){
     let color = prompt("What's your favorite color?");
-    document.body.style.backgroundColor = color;
-});
+    document.body.style.background = color;
+}
+document.getElementById('color-button').addEventListener('click', changeBackgroundColor);
 
 // Greeting based on time of day
-let now = new Date();
-let hour = now.getHours();
-let greetingMessage;
+function getGreetingMessage() {
+    let now = new Date();
+    let hour = now.getHours();
 
-if (hour < 12) {
-    greetingMessage = "Good morning!";
-} else if (hour < 18) {
-    greetingMessage = "Good afternoon!";
-} else {
-    greetingMessage = "Good evening!";
+    if (hour < 12) {
+        return "Good morning!";
+    } else if (hour < 18) {
+        return "Good afternoon!";
+    } else {
+        return "Good evening!";
+    }
 }
 
-document.getElementById('greeting').textContent = greetingMessage;
+// Set the greeting message in the DOM
+document.getElementById('greeting').textContent = getGreetingMessage();
 
 // Interactive counter
 let count = 0;
-document.getElementById('counter-button').addEventListener('click', function() {
+function updateCounter() {
     count++;
     document.getElementById('counter').textContent = "Count: " + count;
-});
+}
+
+document.getElementById('counter-button').addEventListener('click', updateCounter);
